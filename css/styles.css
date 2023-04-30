@@ -383,6 +383,7 @@ h3 {
 
   .nav__branding {
     font-size: 1.2rem;
+    font-weight: 500;
   }
 
   .nav__hamburger-menu {

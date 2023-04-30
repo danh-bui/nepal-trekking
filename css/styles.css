@@ -1,5 +1,6 @@
 :root {
   --nav-height: 4rem;
+  --nav-bg-color: rgba(38, 38, 38, 0.8);
 }
 
 * {
@@ -47,7 +48,7 @@ h3 {
   font-weight: 100;
   font-size: 1.1rem;
   z-index: 1;
-  background: rgba(38, 38, 38, 0.5);
+  background: var(--nav-bg-color);
   color: white;
 }
 
@@ -72,7 +73,7 @@ h3 {
 }
 
 .nav__link:hover {
-  background: rgba(50, 50, 50, 0.51);
+  background: rgba(100, 100, 100, 0.5);
 }
 
 .nav__menu>li:first-child>a {
@@ -413,7 +414,7 @@ h3 {
   .nav__link {
     height: var(--nav-height);
     width: 100%;
-    background: rgba(38, 38, 38, 0.5);
+    background: var(--nav-bg-color);
   }
 
   /* Home Section */
@@ -457,8 +458,12 @@ h3 {
   .local-guides__content {
     flex-direction: column;
   }
+  .local-guides__left {
+    width: 100%;
+  }
   .local-guides__image {
     margin-bottom: 2rem;
+    width: 100%;
   }
   .local-guides__text {
     margin-bottom: 2rem;

@@ -206,7 +206,7 @@ h3 {
   transition: all ease 0.2s;
 }
 
-.feature:hover {
+.feature__item:hover {
   transform: scale(1.03) translateY(-10px);
 }
 

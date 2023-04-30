@@ -1,0 +1,480 @@
+:root {
+  --nav-height: 4rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Alpino", sans-serif;
+}
+
+section {
+  padding: var(--nav-height) 4rem 0;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+h3 {
+  font-size: 1.2rem;
+  /* font-weight: lighter; */
+  text-transform: uppercase;
+}
+
+/* SECTION: NAVBAR */
+#nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--nav-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+  /* border-bottom: 1px solid black; */
+  font-weight: 100;
+  font-size: 1.1rem;
+  z-index: 1;
+  background: rgba(38, 38, 38, 0.5);
+  color: white;
+}
+
+.nav__branding {
+  font-size: 2rem;
+}
+
+.nav__menu {
+  list-style: none;
+  display: flex;
+  height: 100%;
+}
+
+.nav__link {
+  width: 8rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.nav__link:hover {
+  background: rgba(50, 50, 50, 0.51);
+}
+
+.nav__menu>li:first-child>a {
+  /* border-left: 1px solid black; */
+}
+
+.nav__hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.nav__hamburger-menu__bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  background-color: white;
+}
+
+/* SECTION: HOME */
+#home {
+  background-image: radial-gradient(circle at 12.3% 19.3%, rgba(85, 88, 218, 0.5) 0%, rgba(95, 209, 249, 0.1) 100.2%), url("./../images/Annapurna-2.jpeg");
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__title {
+  position: relative;
+  text-align: center;
+}
+
+.home__primary-title {
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  /* font-weight: 700; */
+  text-transform: uppercase;
+}
+
+.home__secondary-title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.home__btn {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background: white;
+  margin: auto;
+  border-radius: 1000px;
+  margin-top: 2rem;
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+
+  animation: pulse 1.6s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+
+  50% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+/* SECTION: ABOUT */
+#about {
+  background-color: #EFEFEF;
+}
+
+.about__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__content--text {
+  width: 50%;
+}
+
+.about__tertiary-title {
+  margin: 1rem 0;
+}
+
+.about__description {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 2;
+}
+
+/* SECTION: FEATURES */
+#features {
+  background-image: url("./../images/mardi-basecamp.jpeg");
+  background-size: cover;
+}
+
+.features__title {
+  color: white;
+}
+
+.features__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature__item {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 16rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  transition: all ease 0.2s;
+}
+
+.feature:hover {
+  transform: scale(1.03) translateY(-10px);
+}
+
+.feature__icon {
+  height: 5rem;
+}
+
+/* SECTION: LOCAL GUIDES */
+#local-guides {
+  background: #EFEFEF;
+}
+
+.local-guides__title {
+  margin: 3rem 0;
+}
+
+.local-guides__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.local-guides__left {
+  width: 50%;
+}
+
+.local-guides__image {
+  display: block;
+  margin-right: 5rem;
+}
+
+.local-guides__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.local-guides__text {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 2;
+}
+
+.trekking-list-btn {
+  padding: 0.8rem 2.4rem;
+  border-radius: 1000px;
+  border: none;
+  background: radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%);
+  color: white;
+  font-family: "Alpino", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 2;
+}
+
+.trekking-list-btn:hover {
+  cursor: pointer;
+}
+
+/* SECTION: GALLERY */
+#gallery {
+  height: auto;
+  padding-bottom: 3rem;
+}
+
+.gallery__content {
+  display: grid;
+  /* grid-column: full-start / full-end; */
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 5vw);
+  grid-gap: 1rem;
+}
+
+.gallery__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery__image--1 {
+  grid-area: 1 / 1 / span 2 / span 2;
+}
+
+.gallery__image--2 {
+  grid-area: 1 / 3 / span 2 / span 2;
+}
+
+.gallery__image--3 {
+  grid-area: 1 / 5 / span 2 / span 2;
+}
+
+.gallery__image--4 {
+  grid-area: 1 / 7 / span 2 / span 2;
+}
+
+.gallery__image--5 {
+  grid-area: 3 / 1 / span 2 / span 2;
+}
+
+.gallery__image--6 {
+  grid-area: 3 / 3 / span 4 / span 2;
+}
+
+.gallery__image--7 {
+  grid-area: 3 / 5 / span 3 / span 4;
+}
+
+.gallery__image--8 {
+  grid-area: 5 / 1 / span 2 / span 2;
+}
+
+.gallery__image--9 {
+  grid-area: 6 / 5 / span 2 / span 4;
+}
+
+.gallery__image--10 {
+  grid-area: 7 / 1 / span 2 / span 2;
+}
+
+.gallery__image--11 {
+  grid-area: 7 / 3 / span 4 / span 2;
+}
+
+.gallery__image--12 {
+  grid-area: 8 / 5 / span 3 / span 2;
+}
+
+.gallery__image--13 {
+  grid-area: 8 / 7 / span 2 / span 2;
+}
+
+.gallery__image--14 {
+  grid-area: 9 / 1 / span 2 / span 2;
+}
+
+.gallery__image--15 {
+  grid-area: 10 / 7 / span 1 / span 2;
+}
+
+/* SECTION: CONTACT */
+#contact {
+  background-image: url("./../images/machhapure.jpeg");
+  background-size: cover;
+  text-align: center;
+}
+
+.contact__title {
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  margin-top: 14rem;
+  margin-bottom: 5rem;
+}
+
+.contact__btn {
+  padding: 1rem 10rem;
+  background: #fff;
+  border-radius: 1000px;
+  color: black;
+  text-decoration: none;
+  animation: pulse 1.6s infinite;
+}
+
+/* RESPONSIVE LAYOUT */
+
+@media (max-width: 768px) {
+  section {
+  padding: var(--nav-height) 2rem 3rem;
+  height: auto;
+  }
+  /* Navbar */
+  #nav {
+    padding: 0 2rem;
+  }
+
+  .nav__hamburger-menu {
+    display: block;
+    padding: 0.4rem 0.6rem;
+    border: 1px solid grey;
+    border-radius: 6px;
+  }
+
+  .nav__hamburger-menu.active .nav__hamburger-menu__bar:nth-child(2) {
+    opacity: 0;
+  }
+  .nav__hamburger-menu.active .nav__hamburger-menu__bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .nav__hamburger-menu.active .nav__hamburger-menu__bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav__menu {
+    flex-direction: column;
+    position: absolute;
+    top: calc(-5 * var(--nav-height));
+    left: 0;
+    width: 100vw;
+    text-align: center;
+    transition: all ease 0.3s;
+  }
+
+  .nav__menu.active {
+    top: var(--nav-height);
+  }
+  
+  .nav__link {
+    height: var(--nav-height);
+    width: 100%;
+    background: rgba(38, 38, 38, 0.5);
+  }
+
+  /* Home Section */
+
+  #home {
+    height: 100vh;
+  }
+
+  /* About Section */
+
+  #about {
+    padding-bottom: 2rem;
+  }
+  .about__content {
+    flex-direction: column;
+  }
+  .about__content--text {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .about__content--image img {
+    width: 100%;
+  }
+
+  /* Features Section */
+  .features__content {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .feature__item {
+    width: 100%;
+  }
+
+  /* Local Guides Section */
+
+  #local-guides {
+
+  }
+
+  .local-guides__content {
+    flex-direction: column;
+  }
+  .local-guides__image {
+    margin-bottom: 2rem;
+  }
+  .local-guides__text {
+    margin-bottom: 2rem;
+  }
+
+  /* Contact Section */
+  #contact {
+    height: 100vh;
+  }
+  .contact__btn {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 4rem;
+    width: 60%;
+  }
+}

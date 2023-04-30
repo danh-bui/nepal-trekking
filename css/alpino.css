@@ -1,0 +1,48 @@
+/**
+ * @license
+ *
+ * Font Family: Alpino
+ * Designed by: Alisa Nowak, Jérémie Hornus
+ * URL: https://www.fontshare.com/fonts/alpino
+ * © 2023 Indian Type Foundry
+ *
+ * Font Styles:
+ * Alpino Medium
+ * Alpino Bold
+ * Alpino Black
+ *
+*/
+
+
+@font-face {
+  font-family: 'Alpino-Medium';
+  src: url('../fonts/Alpino-Medium.woff2') format('woff2'),
+       url('../fonts/Alpino-Medium.woff') format('woff'),
+       url('../fonts/Alpino-Medium.ttf') format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Alpino-Bold';
+  src: url('../fonts/Alpino-Bold.woff2') format('woff2'),
+       url('../fonts/Alpino-Bold.woff') format('woff'),
+       url('../fonts/Alpino-Bold.ttf') format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Alpino-Black';
+  src: url('../fonts/Alpino-Black.woff2') format('woff2'),
+       url('../fonts/Alpino-Black.woff') format('woff'),
+       url('../fonts/Alpino-Black.ttf') format('truetype');
+       font-weight: 900;
+       font-display: swap;
+       font-style: normal;
+}
+

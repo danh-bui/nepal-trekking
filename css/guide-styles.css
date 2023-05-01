@@ -265,4 +265,23 @@ iframe {
     width: 100%;
     background: var(--nav-bg-color);
   }
+
+  /* Info Section */
+  .info__content {
+    flex-direction: column-reverse;
+  }
+  .guide-image {
+    width: 100%;
+  }
+
+  /* Videos Section */
+
+  iframe {
+    width: 100%;
+  }
+
+  /* Contact Section */
+  .contact-link {
+    width: 90%;
+  }
 }

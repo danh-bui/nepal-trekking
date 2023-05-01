@@ -1,6 +1,7 @@
 :root {
   --nav-height: 4rem;
   --nav-bg-color: rgba(38, 38, 38, 0.8);
+  --cta-bg-color: rgb(255, 179, 15);
 }
 
 * {
@@ -30,8 +31,13 @@ h1 {
 
 h3 {
   font-size: 1.2rem;
-  /* font-weight: lighter; */
   text-transform: uppercase;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.8;
 }
 
 /* SECTION: NAVBAR */
@@ -44,12 +50,11 @@ h3 {
   justify-content: space-between;
   align-items: center;
   padding: 0 4rem;
-  /* border-bottom: 1px solid black; */
   font-weight: 100;
   font-size: 1.1rem;
   z-index: 1;
   background: var(--nav-bg-color);
-  color: white;
+  color: #ffffff;
 }
 
 .nav__branding {
@@ -69,20 +74,23 @@ h3 {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: white;
+  color: #ffffff;
 }
 
 .nav__link:hover {
   background: rgba(100, 100, 100, 0.5);
 }
 
-.nav__menu>li:first-child>a {
-  /* border-left: 1px solid black; */
+.nav__link[href="#contact"] {
+  background: var(--cta-bg-color);
 }
 
 .nav__hamburger-menu {
   display: none;
   cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid grey;
+  border-radius: 6px;
 }
 
 .nav__hamburger-menu__bar {
@@ -92,7 +100,7 @@ h3 {
   margin: 5px auto;
   transition: all ease 0.3s;
   -webkit-transition: all ease 0.3s;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 /* SECTION: HOME */
@@ -100,15 +108,17 @@ h3 {
   background-image: radial-gradient(circle at 12.3% 19.3%, rgba(85, 88, 218, 0.5) 0%, rgba(95, 209, 249, 0.1) 100.2%), url("./../images/Annapurna-2.jpeg");
   background-size: cover;
   height: 100vh;
-  color: white;
+  color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .home__title {
   position: relative;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .home__primary-title {
@@ -123,29 +133,31 @@ h3 {
   font-weight: 500;
 }
 
-.home__btn {
+/* .home__btns {
+  display: flex;
+  justify-content: space-between;
+} */
+
+.tell-me-more-btn {
   display: inline-block;
   padding: 1rem 3rem;
-  background: white;
-  margin: auto;
+  background: #fff;
+  color: #000000;
   border-radius: 1000px;
   margin-top: 2rem;
   text-decoration: none;
-  color: black;
   font-size: 1.2rem;
-
-  animation: pulse 1.6s infinite;
 }
 
 @keyframes pulse {
   0% {
     transform: scale(0.9);
-    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 0 0 rgba(255, 179, 15, 0.7);
   }
 
   50% {
     transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 10px rgba(255, 179, 15, 0.5);
   }
 
   100% {
@@ -184,12 +196,13 @@ h3 {
 }
 
 .features__title {
-  color: white;
+  color: #ffffff;
 }
 
 .features__content {
   display: flex;
   justify-content: space-between;
+  gap: 1.5rem;
 }
 
 .feature__item {
@@ -230,11 +243,11 @@ h3 {
 
 .local-guides__left {
   width: 50%;
+  margin-right: 1.2rem;
 }
 
 .local-guides__image {
   display: block;
-  margin-right: 5rem;
 }
 
 .local-guides__right {
@@ -246,19 +259,21 @@ h3 {
 .local-guides__text {
   font-size: 1.2rem;
   font-weight: 300;
-  line-height: 2;
+  line-height: 1.8;
 }
 
-.trekking-list-btn {
+.guide-link {
   padding: 0.8rem 2.4rem;
   border-radius: 1000px;
   border: none;
   background: radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%);
-  color: white;
+  color: #ffffff;
   font-family: "Alpino", sans-serif;
   font-size: 1.2rem;
   font-weight: 300;
-  line-height: 2;
+  line-height: 1.8;
+  text-decoration: none;
+  text-align: center;
 }
 
 .trekking-list-btn:hover {
@@ -354,53 +369,59 @@ h3 {
 }
 
 .contact__title {
-  color: white;
-  text-shadow: 2px 2px 2px black;
+  color: #ffffff;
+  text-shadow: 2px 2px 2px #000000;
   margin-top: 14rem;
   margin-bottom: 5rem;
 }
 
-.contact__btn {
-  padding: 1rem 10rem;
-  background: #fff;
+.cta-btn {
+  /* padding: 1rem 10rem; */
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+  padding: 1rem 0;
+  background: var(--cta-bg-color);
   border-radius: 1000px;
-  color: black;
+  color: #ffffff;
   text-decoration: none;
+  font-size: 1.2rem;
   animation: pulse 1.6s infinite;
 }
 
 /* RESPONSIVE LAYOUT */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 991.98px) {
   section {
-  padding: var(--nav-height) 2rem 3rem;
-  height: auto;
+    padding: var(--nav-height) 2rem 3rem;
+    height: auto;
   }
+
   /* Navbar */
   #nav {
     padding: 0 2rem;
   }
 
   .nav__branding {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .nav__hamburger-menu {
     display: block;
-    padding: 0.4rem 0.6rem;
-    border: 1px solid grey;
-    border-radius: 6px;
   }
 
   .nav__hamburger-menu.active .nav__hamburger-menu__bar:nth-child(2) {
     opacity: 0;
   }
+
   .nav__hamburger-menu.active .nav__hamburger-menu__bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
+
   .nav__hamburger-menu.active .nav__hamburger-menu__bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+
   .nav__menu {
     flex-direction: column;
     position: absolute;
@@ -414,7 +435,7 @@ h3 {
   .nav__menu.active {
     top: var(--nav-height);
   }
-  
+
   .nav__link {
     height: var(--nav-height);
     width: 100%;
@@ -432,13 +453,16 @@ h3 {
   #about {
     padding-bottom: 2rem;
   }
+
   .about__content {
     flex-direction: column;
   }
+
   .about__content--text {
     width: 100%;
     margin-bottom: 2rem;
   }
+
   .about__content--image img {
     width: 100%;
   }
@@ -449,26 +473,26 @@ h3 {
     flex-wrap: wrap;
     gap: 1.5rem;
   }
+
   .feature__item {
     width: 100%;
   }
 
   /* Local Guides Section */
 
-  #local-guides {
-
-  }
-
   .local-guides__content {
     flex-direction: column;
   }
+
   .local-guides__left {
     width: 100%;
   }
+
   .local-guides__image {
     margin-bottom: 2rem;
     width: 100%;
   }
+
   .local-guides__text {
     margin-bottom: 2rem;
   }
@@ -477,13 +501,13 @@ h3 {
   #contact {
     height: 100vh;
   }
-  .contact__btn {
-    padding: 0;
+
+  .cta-btn {
     display: flex;
     justify-content: center;
+    margin: 1rem auto 0.4rem;
     align-items: center;
-    margin: auto;
     height: 4rem;
-    width: 60%;
+    width: 80%;
   }
 }
